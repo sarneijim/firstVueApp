@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>05</title>  
+  <script src="src/vue.js"></script>
+
+</head>
+<body>
+
+  <div id="app">
+    <!-- Opcion 1 -->
+  	<button v-on:click="changeLink">Click to change link</button>
+    <a v-bind:href="link">Link</a>
+    <!-- Opcion 2 -->
+    <button @click="changeLink">Click to change link</button>
+    <a :href="link">Link</a>
+  </div>
+</body>
+<footer>
+	<script src="_05shorcuts.js"></script>
+</footer>
+</html>
