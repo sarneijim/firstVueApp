@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>02 Basic Event</title>  
+  <script src="src/vue.js"></script>
+
+</head>
+<body>
+
+  <div id="app">
+    <!-- $event keep word to select the event -->
+  	<button v-on:click="increase(2, $event)">Odd</button>
+    <button v-on:click="counter++">Odd</button>
+    <p>{{counter}}</p>
+    <p>{{counter*2}}</p>
+    <p>{{counter*2 > 10 ? 'Grater than 10' : 'Smaller than ten'}}</p>
+    <!-- Es lo mismo no pasarle nada que pasarle $event<p v-on:mousemove="updateCoordinates($event)">Coordinates: {{x}}/{{y}}</p> -->
+    <p v-on:mousemove="updateCoordinates">Coordinates: {{x}}/{{y}}
+    <!-- OPCION 1: dummy será la función que bloquee que te den las coordenadas si estas ensimas del DEAD SPOT
+    - <span v-on:mousemove="dummy">DEAD SPOT</span> -->
+    <!-- OPCION 2 .stop can stop by vue de propagation of the event-->
+      - Show alert when space keyup <span v-on:mousemove.stop>DEAD SPOT</span>
+    </p>
+    <!-- Vue select when you choose a key enter_space_e -->
+    <input type="text" v-on:keyup.space="alertMe">
+  </div>
+</body>
+<footer>
+	<script src="_02basicEvent.js"></script>
+</footer>
+</html>
