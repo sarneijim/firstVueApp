@@ -4,7 +4,7 @@ new Vue({
     link:'http://google.com'
   },
   methods: {
-    changeLink: function(step, event){
+    changeLink: function(){
       this.link = 'http://apple.com';
     }
   }
