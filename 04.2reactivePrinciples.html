@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>04 Basic Counter</title>  
+  <script src="src/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <button v-on:click="counter++">Increase</button>
+    <button v-on:click="counter--">decrease</button>
+    <button v-on:click="secondCounter++">Increment second</button>
+
+    <p>Counter: {{counter}} | {{secondCounter}}</p>
+    <!-- Los computed no necesitan parentesis -->
+    <p>Result: {{result()}} | {{output}}</p>
+
+  </div>
+</body>
+<footer>
+	<script src="_04.2reactivePrinciples.js"></script>
+</footer>
+</html>

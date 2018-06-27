@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>04 Basic Counter</title>  
+  <script src="src/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+
+    <p>OPCION 1 _ MALA OPCIÓN</p>
+    <button v-on:click="increase">Increase</button>
+    <button v-on:click="decrease">decrease</button>
+    <p>Counter: {{counter}}</p>
+    <p>Result: {{result}}</p>
+
+    <p>OPCION 2 _ BUENA OPCIÓN</p>
+    <button v-on:click="counter2++">Increase</button>
+    <button v-on:click="counter2--">decrease</button>
+    <p>Counter: {{counter2}}</p>
+    <p>Result: {{result2()}}</p>
+
+    <!-- Computed -->
+    <p>OPCION 3 _ INICIALIZACION COMPUTED</p>
+    <button v-on:click="counter3++">Increase</button>
+    <button v-on:click="counter3--">decrease</button>
+    <button v-on:click="secondCounter3++">Increment second</button>
+
+    <p>Counter: {{counter3}} | {{secondCounter3}}</p>
+    <!-- Los computed no necesitan parentesis -->
+    <p>Result: {{result3()}} | {{output}}</p>
+
+  </div>
+</body>
+<footer>
+	<script src="_04.1computedProperty.js"></script>
+</footer>
+</html>
