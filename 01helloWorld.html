@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue Basic</title>
+  <!-- include Vue.js from a CDN -->
+ <!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.min.js"></script> -->
+  
+  <script src="src/vue.js"></script>
+
+</head>
+<body>
+  <!-- listener v-on -->
+  
+  <div id="app">
+  	<input type="text" v-on:input="changeTitle">
+    <span>{{ inputWord}}</span>
+  	<!-- v-once solo cambia una vez -->
+    <h1 v-once>{{ title }}</h1>
+    <!-- v-bind enlaza el link al html (no necesita {{}}) -->
+    <p>{{sayHello()}} - enlace: <a v-bind:href="link">Google</a></p>
+    <hr>
+    <!-- v-html escribe html directamente -->
+    <p v-html="finishedLink"></p>
+  </div>
+</body>
+<footer>
+	<script src="_01helloWorld.js"></script>
+</footer>
+</html>
