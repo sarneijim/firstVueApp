@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>05.3 Class in computed propety</title>  
+  <script src="src/vue.js"></script>
+  <link rel="stylesheet" type="text/css" href="__05.3cssClass.css">
+</head>
+<body>
+
+  <div id="app">
+    <div class="demo" @click="attachRed = !attachRed" :class="divClasses"></div>
+    <div class="demo"></div>
+    <div class="demo" :class="{red: attachRed}"></div>
+    <!-- If only have one argument-->
+    <div class="demo" :class="color"></div> 
+    <!--But if it is have more than two...-->
+    <div class="demo" :class="[color, {red: attachRed}]"></div>
+    <hr>
+    <!-- Rewrite color of the div -->
+    <input type="text" v-model="color">
+  </div>
+</body>
+<footer>
+	<script src="_05.3cssClass.js"></script>
+</footer>
+</html>
