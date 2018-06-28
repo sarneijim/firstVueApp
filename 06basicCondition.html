@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>06 Basic Condition</title>  
+  <script src="src/vue.js"></script>
+
+</head>
+<body>
+
+  <div id="app">
+    <!-- Totally delete, don't exit in the DOM -->
+    <p v-if="show">You can see me! <span>Hello!</span></p>
+    <!-- Else directly of nearest if -->
+    <p v-else>Now you see me!</p>
+    <!-- show hide the element, continue with display none in DOM -->
+    <p v-show="show">Do you also see me?</p>
+    <!-- template doesnt exist in the html, but is useful to group different tags ( in this example: h1 & p) -->
+    <template v-if="show">
+      <h1>Heading</h1>
+      <p>Inside a template</p>
+    </template>
+    <button @click="show = !show">Switch</button>
+  </div>
+</body>
+<footer>
+	<script src="_06basicCondition.js"></script>
+</footer>
+</html>

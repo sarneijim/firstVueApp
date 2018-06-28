@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>07 List</title>
+  <script src="src/vue.js"></script>
+
+</head>
+<body>  
+  <div id="app">
+  	<!-- SIMPLE ARRAY -->
+    <ul>
+    	<li v-for="ingredient in ingredients">{{ingredient}}</li>
+    </ul>
+    <ul>
+        <!-- Para que quede bien almacenada sin darme errores por ser dinámico, es más seguro (ojo la i sería dinámica).
+        <li v-for="(ingredient, i) in ingredients" :key="ingredient">{{ingredient}} ({{i}})</li> -->
+    	<li v-for="(ingredient, i) in ingredients">{{ingredient}} ({{i}})</li>
+    </ul>
+
+    <template v-for="(ingredient, index) in ingredients">
+    	<h1>{{ingredient}}</h1>
+    	<p>{{index}}</p>
+    </template>
+
+    <!-- COMPLEX OBJECT -->
+    <!-- directly -->
+    <ul>
+    	<li v-for="person in persons">{{person.name}}</li>
+    </ul>
+    <ul>
+    	<li v-for="person in persons">
+    		<span v-for="value in person">{{value}} </span>
+    	</li>
+    </ul>
+    <!-- with key -->
+    <ul>
+    	<li v-for="person in persons">
+    		<div v-for="(value, key) in person">{{key}}: {{value}} </div>
+    	</li>
+    </ul>
+    <!-- with key and index -->
+    <ul>
+    	<li v-for="person in persons">
+    		<div v-for="(value, key, index) in person">{{key}}: {{value}} ({{index}}) </div>
+    	</li>
+    </ul>
+    <!--  -->
+    <button @click = "ingredients.push('spices')">Add new</button>
+  </div>
+</body>
+<footer>
+	<script src="_07list.js"></script>
+</footer>
+</html>
