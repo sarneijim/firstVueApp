@@ -11,3 +11,7 @@ Chapter 4 : First Course Project - The Monster Slayer
     Proyecto 01GameMonster
 
 Chapter 5 : Understanding the VueJS Instance
+09-10
+
+Chapter 6 : Moving to a "Real" Development Workflow with Webpack and Vue CLI
+     Carpeta vue-cli

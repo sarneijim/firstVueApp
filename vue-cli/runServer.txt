@@ -1,0 +1,2 @@
+npm run dev _ arrancar a secas
+npm run build _ construir y mimificar
