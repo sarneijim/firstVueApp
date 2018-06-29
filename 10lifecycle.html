@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>10 Lifecycle</title>
+  <script src="src/vue.js"></script>
+
+</head>
+<body>  
+  <div id="app">
+    <h1>{{title}}</h1>
+    <!-- Si le das dos veces al boton no lo llama, no lo llama hasta que haya realmente un combio -->
+    <button @click="title='Changed'">Update Title</button>
+    <button @click="destroy">Destroy</button>
+  </div>
+</body>
+<footer>
+	<script src="10lifecycle.js"></script>
+</footer>
+</html>

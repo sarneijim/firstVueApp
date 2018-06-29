@@ -1,5 +1,5 @@
 new Vue({
-  el: '#app',
+  el: '#app1',
   data: {
     title: 'The VueJS Instance',
     showParagraph: false
@@ -24,3 +24,12 @@ new Vue({
     }
   }
 });
+// No conection between two instances. 
+// If you want any interaction only use one instance
+new Vue({
+  el: '#app2',
+  data: {
+    title: 'The second Instance',
+    showParagraph: false
+  }
+})

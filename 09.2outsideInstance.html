@@ -1,0 +1,29 @@
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+<div id="app1">
+  <h1 ref="heading">{{ title }}</h1>
+  <button v-on:click="show" >Show Paragraph</button>
+  <p v-if="showParagraph">This is not always visible</p>
+</div>
+
+<div id="app2">
+  <h1 ref="heading">{{ title }}</h1>
+  <button @click="onChange">Change something in Vue 1 (other instance)</button>
+  <p v-if="showParagraph">This is not always visible</p>
+</div>
+
+<div id="app3">
+  <h1 ref="heading">{{ title }}</h1>
+  <button @click="refExample" ref="myButton">Change something in Vue 1 (other instance)</button>
+</div>
+
+<div id="app4">
+  <h1 ref="heading">{{ title }}</h1>
+</div>
+
+<!-- Writing html by vue -->
+<div id="app5"></div>
+<!-- Usar con tag, clases.. problema solo coge el primer elemento-->
+<tag></tag>
+<!-- <div class="class"></div> -->
+<script src="09.2outsideInstance.js"></script>
